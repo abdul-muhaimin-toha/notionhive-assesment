@@ -6,6 +6,8 @@ const mobileNavOpen = document.getElementById('mobile-nav-opener');
 const mobileNavClose = document.getElementById('mobile-nav-close');
 const contactButtons = document.querySelectorAll('.contact-button');
 const mobileNav = document.getElementById('mobile-navigation');
+const onLoadBlogs = document.querySelectorAll('.blog-onload');
+const loadMoreBtn = document.getElementById('load-more');
 
 // /////////////////////////////////
 // Navigation Functionality
@@ -53,6 +55,21 @@ $(document).ready(function () {
   });
 });
 
+// /////////////////////////////////
+// Modal Functionality
+// /////////////////////////////////
+
 const myModal = new HystModal({
   linkAttributeName: 'data-hystmodal',
+});
+
+// /////////////////////////////////
+// Load More Functionality
+// /////////////////////////////////
+
+loadMoreBtn.addEventListener('click', function () {
+  onLoadBlogs.forEach((blog) => {
+    blog.classList.remove('blog-onload');
+    loadMoreBtn.style.display = 'none';
+  });
 });
