@@ -27,5 +27,10 @@ $(document).ready(function () {
     dots: true,
     centerMode: true,
     variableWidth: true,
+    infinite: true,
+    speed: 900,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    loop: true,
   });
 });
