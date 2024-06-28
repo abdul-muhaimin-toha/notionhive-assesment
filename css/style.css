@@ -23,7 +23,7 @@ html {
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
-  background-color: #5742ac1a;
+  background-color: #5d4ba51a;
   color: var(--color-text);
   font-weight: 400; }
 
@@ -76,13 +76,15 @@ body {
     padding: 1rem 2rem;
     border: 2px solid var(--color-primary);
     background: none;
-    font-size: 1.6rem;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2 ease-in-out; }
     .button-slider:hover {
       color: var(--color-text-2);
       border-color: var(--color-text-2); }
+  .button-contact {
+    padding: 1.5rem 2rem;
+    align-self: flex-end; }
 
 .navigation {
   display: flex;
@@ -148,7 +150,7 @@ body {
       color: var(--color-primary); }
 
 .slider {
-  padding: 0 2rem;
+  padding: 0 2rem 1.5rem;
   box-shadow: none; }
   .slider__item {
     width: 85rem !important;
@@ -204,7 +206,55 @@ body {
   justify-content: center;
   align-items: center; }
   .slick-dots li {
-    margin: 0; }
+    margin: 0;
+    width: 2rem; }
   @media only screen and (max-width: 68.75em) {
     .slick-dots {
       display: none !important; } }
+
+.contact {
+  background: rgba(219, 217, 217, 0.596); }
+  .contact__heading {
+    background: var(--color-text-2);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .contact__title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--color-white); }
+  .contact__form {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__form {
+        grid-template-columns: 0; } }
+  .contact__input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__input {
+        grid-column-end: span 2; } }
+  .contact__label {
+    color: var(--color-text-2);
+    font-weight: 700;
+    font-size: 1.7rem; }
+  .contact__feild {
+    padding: 1rem;
+    background: var(--color-white);
+    font-size: 1.5rem;
+    border: 1px solid var(--color-primary);
+    font-size: 1.7rem; }
+  .contact__full {
+    grid-column-end: span 2; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__full {
+        grid-column-end: span 2; } }
+
+.hystmodal {
+  margin: 1rem;
+  z-index: 400; }

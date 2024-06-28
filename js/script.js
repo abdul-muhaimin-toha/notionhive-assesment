@@ -4,6 +4,7 @@
 
 const mobileNavOpen = document.getElementById('mobile-nav-opener');
 const mobileNavClose = document.getElementById('mobile-nav-close');
+const contactButtons = document.querySelectorAll('.contact-button');
 const mobileNav = document.getElementById('mobile-navigation');
 
 // /////////////////////////////////
@@ -16,6 +17,12 @@ mobileNavOpen.addEventListener('click', function () {
 
 mobileNavClose.addEventListener('click', function () {
   mobileNav.style.display = 'none';
+});
+
+contactButtons.forEach((button) => {
+  button.addEventListener('click', function () {
+    mobileNav.style.display = 'none';
+  });
 });
 
 // /////////////////////////////////
@@ -33,4 +40,9 @@ $(document).ready(function () {
     autoplaySpeed: 6000,
     loop: true,
   });
+});
+
+const myModal = new HystModal({
+  linkAttributeName: 'data-hystmodal',
+  //settings (optional). see API
 });

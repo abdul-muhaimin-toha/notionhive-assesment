@@ -55,7 +55,6 @@
     padding: 1rem 2rem;
     border: 2px solid var(--color-primary);
     background: none;
-    font-size: 1.6rem;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2 ease-in-out;
@@ -64,6 +63,11 @@
       color: var(--color-text-2);
       border-color: var(--color-text-2);
     }
+  }
+
+  &-contact {
+    padding: 1.5rem 2rem;
+    align-self: flex-end;
   }
 }
 
@@ -168,7 +172,7 @@
 // ////////////////////////////////
 
 .slider {
-  padding: 0 2rem;
+  padding: 0 2rem 1.5rem;
   box-shadow: none;
 
   &__item {
@@ -222,6 +226,10 @@
   }
 }
 
+// ////////////////////////////////
+// Slick Overwrite Styles
+// ////////////////////////////////
+
 .slick {
   &-slide {
     opacity: 70%;
@@ -251,10 +259,80 @@
 
     & li {
       margin: 0;
+      width: 2rem;
     }
 
     @media only screen and (max-width: $bp-large) {
       display: none !important;
     }
   }
+}
+
+// ////////////////////////////////
+// Modal related Styles
+// ////////////////////////////////
+
+.contact {
+  background: rgba(219, 217, 217, 0.596);
+
+  &__heading {
+    background: var(--color-text-2);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  &__form {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 0;
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @media only screen and (max-width: $bp-small) {
+      grid-column-end: span 2;
+    }
+  }
+
+  &__label {
+    color: var(--color-text-2);
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+
+  &__feild {
+    padding: 1rem;
+    background: var(--color-white);
+    font-size: 1.5rem;
+    border: 1px solid var(--color-primary);
+    font-size: 1.7rem;
+  }
+
+  &__full {
+    grid-column-end: span 2;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column-end: span 2;
+    }
+  }
+}
+
+.hystmodal {
+  margin: 1rem;
+  z-index: 400;
 }

@@ -25,8 +25,33 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/hystmodal.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
+      integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="js/hystmodal.min.js"></script>
+    <script defer src="js/script.js"></script>
 
     <title>Notionhive - Assessment</title>
   </head>
@@ -70,7 +95,12 @@
                 <a href="" class="navigation__link">Blog</a>
               </li>
             </ul>
-            <button class="button-navigation button">Contact Us</button>
+            <button
+              class="contact-button button-navigation button"
+              data-hystmodal="#myModal"
+            >
+              Contact Us
+            </button>
             <button class="button-sidebar button" id="mobile-nav-opener">
               <img src="img/icons/icon-sidebar-open.svg" alt="Sidebar opener" />
             </button>
@@ -107,10 +137,18 @@
             <a href="" class="mobile-navigation__link">Blog</a>
           </li>
         </ul>
-        <button class="button-mobile-navigation button">Contact Us</button>
+        <button
+          class="contact-button button-mobile-navigation button"
+          data-hystmodal="#myModal"
+        >
+          Contact Us
+        </button>
       </nav>
     </header>
     <main>
+      <!-- *************************** -->
+      <!-- Slider Section -->
+      <!-- *************************** -->
       <section class="section-slider">
         <div class="container">
           <div class="slider">
@@ -126,13 +164,13 @@
                   <p class="slider__date">10 June 2023</p>
                 </div>
                 <h2 class="slider__heading">
-                  Lorem ipsum dolor sit amet consectetur
+                  The future of AI: Transforming our world
                 </h2>
                 <p class="slider__description">
-                  Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam
-                  consectetur elementum aenean fringilla amet blandit duis.
-                  Neque habitant odio donec adipiscing etiam lobortis volutpat
-                  est...
+                  Artificial Intelligence (AI) is no longer a concept of the
+                  future; it is transforming our present. From self-driving cars
+                  to personalized medicine, AI is revolutionizing industries
+                  across the board....
                 </p>
                 <button class="button-slider">Read More</button>
               </div>
@@ -145,17 +183,15 @@
               />
               <div class="slider__content">
                 <div class="slider__details">
-                  <p class="slider__category">Design & Creative</p>
-                  <p class="slider__date">10 June 2023</p>
+                  <p class="slider__category">Technology</p>
+                  <p class="slider__date">25 July 2023</p>
                 </div>
-                <h2 class="slider__heading">
-                  Lorem ipsum dolor sit amet consectetur
-                </h2>
+                <h2 class="slider__heading">The Power of Design Thinking</h2>
                 <p class="slider__description">
-                  Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam
-                  consectetur elementum aenean fringilla amet blandit duis.
-                  Neque habitant odio donec adipiscing etiam lobortis volutpat
-                  est...
+                  Design thinking is more than just a buzzword; it is a powerful
+                  approach to solving complex problems creatively. Whether you
+                  are designing a product, or an experience, design thinking
+                  helps to uncover innovative solutions by....
                 </p>
                 <button class="button-slider">Read More</button>
               </div>
@@ -168,17 +204,18 @@
               />
               <div class="slider__content">
                 <div class="slider__details">
-                  <p class="slider__category">Design & Creative</p>
-                  <p class="slider__date">10 June 2023</p>
+                  <p class="slider__category">Sports</p>
+                  <p class="slider__date">12 August 2024</p>
                 </div>
                 <h2 class="slider__heading">
-                  Lorem ipsum dolor sit amet consectetur
+                  The Evolution of Sports Technology
                 </h2>
                 <p class="slider__description">
-                  Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam
-                  consectetur elementum aenean fringilla amet blandit duis.
-                  Neque habitant odio donec adipiscing etiam lobortis volutpat
-                  est...
+                  Sports technology is changing the way we play, watch, and
+                  experience sports. From wearable tech that tracks athlete
+                  performance to virtual reality that immerses fans in the
+                  action, the integration of technology in sports is creating
+                  new possibilities...
                 </p>
                 <button class="button-slider">Read More</button>
               </div>
@@ -191,17 +228,18 @@
               />
               <div class="slider__content">
                 <div class="slider__details">
-                  <p class="slider__category">Design & Creative</p>
+                  <p class="slider__category">Innovation</p>
                   <p class="slider__date">10 June 2023</p>
                 </div>
                 <h2 class="slider__heading">
-                  Lorem ipsum dolor sit amet consectetur
+                  Breakthroughs Shaping Our Future
                 </h2>
                 <p class="slider__description">
-                  Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam
-                  consectetur elementum aenean fringilla amet blandit duis.
-                  Neque habitant odio donec adipiscing etiam lobortis volutpat
-                  est...
+                  Innovation is the engine that drives progress. Across various
+                  fields, visionary thinkers are breaking boundaries and
+                  introducing groundbreaking ideas that have the potential to
+                  change the world. Discover the most exciting innovations
+                  happening today...
                 </p>
                 <button class="button-slider">Read More</button>
               </div>
@@ -210,24 +248,77 @@
         </div>
       </section>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
-      integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="js/script.js"></script>
+
+    <!-- *************************** -->
+    <!-- Modal Section -->
+    <!-- *************************** -->
+    <div class="hystmodal" id="myModal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+          <!-- You modal HTML markup -->
+          <section class="contact">
+            <div class="contact__heading">
+              <h3 class="contact__title">Contact Us</h3>
+              <button
+                data-hystclose
+                class="button-sidebar button-sidebar--close button"
+                id="mobile-nav-close"
+              >
+                <img
+                  src="img/icons/icon-sidebar-close.svg"
+                  alt="Sidebar opener"
+                />
+              </button>
+            </div>
+            <form class="contact__form">
+              <div class="contact__input">
+                <label for="name" class="contact__label">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="contact__feild"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="contact__input">
+                <label for="email" class="contact__label">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="contact__feild"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="contact__input contact__full">
+                <label for="subject" class="contact__label"
+                  >Select Subject</label
+                >
+                <select name="subject" id="subject" class="contact__feild">
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="application-development">
+                    Application Development
+                  </option>
+                  <option value="content-writing">Content Writing</option>
+                </select>
+              </div>
+              <div class="contact__input contact__full">
+                <label for="message" class="contact__label">Your Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="8"
+                  class="contact__feild"
+                ></textarea>
+              </div>
+              <div class="contact__input contact__full">
+                <button class="button button-contact" data-hystclose>
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
