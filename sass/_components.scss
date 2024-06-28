@@ -69,6 +69,10 @@
     padding: 1.5rem 2rem;
     align-self: flex-end;
   }
+
+  &-video {
+    margin-top: 2rem;
+  }
 }
 
 // ////////////////////////////////
@@ -353,6 +357,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 6rem;
 
     @media only screen and (max-width: $bp-medium) {
       flex-direction: column;
@@ -392,7 +397,7 @@
     & p {
       padding: 1rem 2rem;
       border-radius: 2rem;
-      background: #dfdfdf;
+      background: #e0d7d7;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -405,7 +410,7 @@
       }
 
       &:hover {
-        color: var(--color-text);
+        color: var(--color-primary);
       }
     }
   }
@@ -422,7 +427,7 @@
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
-    background: #dfdfdf;
+    background: #e0d7d7;
     border-radius: 4rem;
 
     @media only screen and (max-width: $bp-medium) {
@@ -456,6 +461,75 @@
 
     & img {
       width: 2rem;
+    }
+  }
+}
+
+.blog {
+  &-image-container {
+    margin-bottom: 3rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+  }
+
+  &-carousal {
+    width: 100%;
+    grid-column: span 4;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: span 8;
+    }
+
+    &__slider {
+      height: 30rem;
+
+      & img {
+        height: 30rem;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      padding: 0 2rem 2rem;
+    }
+
+    &__details {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        gap: 1rem;
+      }
+    }
+
+    &__category {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--color-text-2);
+    }
+
+    &__heading {
+      font-size: 2.5rem;
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      color: var(--color-text-2);
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    &__author {
+      font-weight: 700;
     }
   }
 }

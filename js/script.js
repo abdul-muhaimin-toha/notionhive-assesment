@@ -42,7 +42,17 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $('.blog-carousal__slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 900,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    loop: true,
+  });
+});
+
 const myModal = new HystModal({
   linkAttributeName: 'data-hystmodal',
-  //settings (optional). see API
 });

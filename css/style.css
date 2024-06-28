@@ -88,6 +88,8 @@ body {
   .button-contact {
     padding: 1.5rem 2rem;
     align-self: flex-end; }
+  .button-video {
+    margin-top: 2rem; }
 
 .navigation {
   display: flex;
@@ -271,7 +273,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem; }
+  gap: 2rem;
+  margin-bottom: 6rem; }
   @media only screen and (max-width: 56.25em) {
     .blogs__functionality {
       flex-direction: column; } }
@@ -304,7 +307,7 @@ body {
   .blogs__category p {
     padding: 1rem 2rem;
     border-radius: 2rem;
-    background: #dfdfdf;
+    background: #e0d7d7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,7 +318,7 @@ body {
       .blogs__category p {
         padding: 1rem; } }
     .blogs__category p:hover {
-      color: var(--color-text); }
+      color: var(--color-primary); }
 
 .blogs__right {
   display: flex;
@@ -328,7 +331,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
-  background: #dfdfdf;
+  background: #e0d7d7;
   border-radius: 4rem; }
   @media only screen and (max-width: 56.25em) {
     .blogs__search-box {
@@ -355,3 +358,49 @@ body {
   outline: none; }
   .blogs__button img {
     width: 2rem; }
+
+.blog-image-container {
+  margin-bottom: 3rem; }
+
+.blog__container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2rem; }
+
+.blog-carousal {
+  width: 100%;
+  grid-column: span 4;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; }
+  @media only screen and (max-width: 56.25em) {
+    .blog-carousal {
+      grid-column: span 8; } }
+  .blog-carousal__slider {
+    height: 30rem; }
+    .blog-carousal__slider img {
+      height: 30rem;
+      object-fit: cover; }
+  .blog-carousal__content {
+    padding: 0 2rem 2rem; }
+  .blog-carousal__details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 30em) {
+      .blog-carousal__details {
+        gap: 1rem; } }
+  .blog-carousal__category {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-text-2); }
+  .blog-carousal__heading {
+    font-size: 2.5rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color: var(--color-text-2);
+    margin-bottom: 1rem; }
+  .blog-carousal__description {
+    font-size: 1.4rem;
+    margin-bottom: 2rem; }
+  .blog-carousal__author {
+    font-weight: 700; }
