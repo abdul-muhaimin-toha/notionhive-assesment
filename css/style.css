@@ -23,7 +23,7 @@ html {
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
-  background-color: var(--color-white);
+  background-color: #5742ac1a;
   color: var(--color-text);
   font-weight: 400; }
 
@@ -34,6 +34,55 @@ body {
 .container {
   max-width: 129rem;
   margin: 0 auto; }
+
+.button {
+  color: var(--color-white);
+  background: var(--color-primary);
+  font-weight: 500;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  text-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: all 0.2s;
+  cursor: pointer; }
+  .button:hover {
+    opacity: 90%; }
+  .button-navigation {
+    padding: 1.1rem 2rem; }
+    @media only screen and (max-width: 30em) {
+      .button-navigation {
+        display: none; } }
+  .button-sidebar {
+    padding: 0.5rem;
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .button-sidebar {
+        display: flex; } }
+  .button-mobile-navigation {
+    padding: 1.1rem 2rem; }
+  .button-sidebar--close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex; }
+  .button-slider {
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-primary);
+    background: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2 ease-in-out; }
+    .button-slider:hover {
+      color: var(--color-text-2);
+      border-color: var(--color-text-2); }
 
 .navigation {
   display: flex;
@@ -61,7 +110,10 @@ body {
     padding: 1rem;
     color: var(--color-text-2);
     text-decoration: none;
-    text-wrap: nowrap; }
+    text-wrap: nowrap;
+    transition: color 0.2s ease-in-out; }
+    .navigation__link:hover {
+      color: var(--color-primary); }
   .navigation__logo {
     padding: 2rem 0; }
 
@@ -90,36 +142,69 @@ body {
     text-decoration: none;
     padding: 1rem;
     width: 100%;
-    display: inline-block; }
+    display: inline-block;
+    transition: color 0.2s ease-in-out; }
+    .mobile-navigation__link:hover {
+      color: var(--color-primary); }
 
-.button {
-  color: var(--color-white);
-  background: var(--color-primary);
-  font-weight: 500;
-  border: none;
-  outline: none;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  border-radius: 0.2rem;
-  text-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  display: flex; }
-  .button-navigation {
-    padding: 1.1rem 2rem; }
-    @media only screen and (max-width: 30em) {
-      .button-navigation {
-        display: none; } }
-  .button-sidebar {
-    padding: 0.5rem;
-    display: none; }
+.slider {
+  padding: 0 2rem;
+  box-shadow: none; }
+  .slider__item {
+    width: 85rem !important;
+    margin: 0 2rem; }
     @media only screen and (max-width: 56.25em) {
-      .button-sidebar {
-        display: flex; } }
-  .button-mobile-navigation {
-    padding: 1.1rem 2rem; }
-  .button-sidebar--close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    display: flex; }
+      .slider__item {
+        width: 90vw !important; } }
+  .slider__content {
+    padding: 4rem;
+    background: var(--color-white); }
+  .slider__details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 30em) {
+      .slider__details {
+        gap: 1rem; } }
+  .slider__category {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-text-2); }
+  .slider__image {
+    height: 50rem;
+    width: 100%;
+    object-fit: cover; }
+  .slider__heading {
+    font-size: 3.2rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color: var(--color-text-2);
+    margin-bottom: 1rem; }
+  .slider__description {
+    font-size: 1.8rem;
+    margin-bottom: 2rem; }
+
+.slick-slide {
+  opacity: 70%; }
+  .slick-slide .slider__content {
+    display: none; }
+
+.slick-active {
+  opacity: 100%; }
+  .slick-active .slider__content {
+    display: block; }
+
+.slick-arrow {
+  display: none !important; }
+
+.slick-dots {
+  display: flex !important;
+  gap: 0rem !important;
+  justify-content: center;
+  align-items: center; }
+  .slick-dots li {
+    margin: 0; }
+  @media only screen and (max-width: 68.75em) {
+    .slick-dots {
+      display: none !important; } }

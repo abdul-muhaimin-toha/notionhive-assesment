@@ -1,3 +1,76 @@
+// ////////////////////////////////
+// All Buttons Styles
+// ////////////////////////////////
+
+.button {
+  color: var(--color-white);
+  background: var(--color-primary);
+  font-weight: 500;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  text-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 90%;
+  }
+
+  &-navigation {
+    padding: 1.1rem 2rem;
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
+  }
+
+  &-sidebar {
+    padding: 0.5rem;
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+    }
+  }
+
+  &-mobile-navigation {
+    padding: 1.1rem 2rem;
+  }
+
+  &-sidebar--close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+  }
+
+  &-slider {
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-primary);
+    background: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2 ease-in-out;
+
+    &:hover {
+      color: var(--color-text-2);
+      border-color: var(--color-text-2);
+    }
+  }
+}
+
+// ////////////////////////////////
+// Navigation Styles
+// ////////////////////////////////
+
 .navigation {
   display: flex;
   padding: 0 2rem;
@@ -37,12 +110,21 @@
     color: var(--color-text-2);
     text-decoration: none;
     text-wrap: nowrap;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 
   &__logo {
     padding: 2rem 0;
   }
 }
+
+// ////////////////////////////////
+// Mobile Navigation Styles
+// ////////////////////////////////
 
 .mobile-navigation {
   z-index: 200;
@@ -73,47 +155,106 @@
     padding: 1rem;
     width: 100%;
     display: inline-block;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 }
 
-.button {
-  color: var(--color-white);
-  background: var(--color-primary);
-  font-weight: 500;
-  border: none;
-  outline: none;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  border-radius: 0.2rem;
-  text-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+// ////////////////////////////////
+// Slider Styles
+// ////////////////////////////////
 
-  &-navigation {
-    padding: 1.1rem 2rem;
+.slider {
+  padding: 0 2rem;
+  box-shadow: none;
+
+  &__item {
+    width: 85rem !important;
+    margin: 0 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 90vw !important;
+    }
+  }
+
+  &__content {
+    padding: 4rem;
+    background: var(--color-white);
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
     @media only screen and (max-width: $bp-smallest) {
+      gap: 1rem;
+    }
+  }
+
+  &__category {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-text-2);
+  }
+
+  &__image {
+    height: 50rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color: var(--color-text-2);
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.slick {
+  &-slide {
+    opacity: 70%;
+
+    & .slider__content {
       display: none;
     }
   }
 
-  &-sidebar {
-    padding: 0.5rem;
-    display: none;
+  &-active {
+    opacity: 100%;
 
-    @media only screen and (max-width: $bp-medium) {
-      display: flex;
+    & .slider__content {
+      display: block;
     }
   }
 
-  &-mobile-navigation {
-    padding: 1.1rem 2rem;
+  &-arrow {
+    display: none !important;
   }
 
-  &-sidebar--close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    display: flex;
+  &-dots {
+    display: flex !important;
+    gap: 0rem !important;
+    justify-content: center;
+    align-items: center;
+
+    & li {
+      margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      display: none !important;
+    }
   }
 }
