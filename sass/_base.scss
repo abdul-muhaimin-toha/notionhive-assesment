@@ -1,0 +1,40 @@
+:root {
+  --color-white: White;
+  --color-text: #676276;
+  --color-text-2: #2c2347;
+  --color-primary: #5742ac;
+}
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 30em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-weight: 400;
+}
