@@ -258,3 +258,6 @@ body {
 .hystmodal {
   margin: 1rem;
   z-index: 400; }
+  .hystmodal__wrap {
+    background: #2c2347a4;
+    backdrop-filter: blur(10px); }
