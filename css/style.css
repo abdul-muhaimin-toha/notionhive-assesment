@@ -35,6 +35,9 @@ body {
   max-width: 129rem;
   margin: 0 auto; }
 
+.section-blogs {
+  margin: 10rem 2rem; }
+
 .button {
   color: var(--color-white);
   background: var(--color-primary);
@@ -259,5 +262,96 @@ body {
   margin: 1rem;
   z-index: 400; }
   .hystmodal__wrap {
-    background: #2c2347a4;
-    backdrop-filter: blur(10px); }
+    background: #2c2347a4; }
+    @media only screen and (min-width: 56.25em) {
+      .hystmodal__wrap {
+        backdrop-filter: blur(10px); } }
+
+.blogs__functionality {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blogs__functionality {
+      flex-direction: column; } }
+
+.blogs__left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4rem;
+  width: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .blogs__left {
+      justify-content: space-between;
+      gap: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .blogs__left {
+      justify-content: space-between;
+      gap: 1rem; } }
+
+.blogs__title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-text-2); }
+
+.blogs__category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; }
+  .blogs__category p {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer; }
+    @media only screen and (max-width: 37.5em) {
+      .blogs__category p {
+        padding: 1rem; } }
+    .blogs__category p:hover {
+      color: var(--color-text); }
+
+.blogs__right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%; }
+
+.blogs__search-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #dfdfdf;
+  border-radius: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blogs__search-box {
+      width: 100%;
+      justify-content: start; } }
+
+.blogs__search-input {
+  border: none;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: var(--color-text-2);
+  background: transparent;
+  outline: none; }
+  @media only screen and (max-width: 56.25em) {
+    .blogs__search-input {
+      width: 100%; } }
+  .blogs__search-input:focus {
+    border: none;
+    outline: none; }
+
+.blogs__button {
+  background: none;
+  border: none;
+  outline: none; }
+  .blogs__button img {
+    width: 2rem; }
