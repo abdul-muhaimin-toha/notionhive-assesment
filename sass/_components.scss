@@ -72,6 +72,20 @@
 
   &-video {
     margin-top: 2rem;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-primary);
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2 ease-in-out;
+
+    &:hover {
+      color: var(--color-text-2);
+      border-color: var(--color-text-2);
+    }
   }
 
   &-banner {
@@ -259,7 +273,12 @@
   }
 
   &-arrow {
-    display: none !important;
+    background: red;
+    z-index: 100;
+
+    @media only screen and (max-width: $bp-largest) {
+      display: none !important;
+    }
   }
 
   &-dots {
@@ -277,6 +296,33 @@
       display: none !important;
     }
   }
+}
+
+.slick-prev,
+.slick-next {
+  background: #000000e3;
+  padding: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 2px;
+  top: 30%;
+
+  &:hover,
+  &:focus {
+    background: #000000e3;
+  }
+}
+
+.slick-prev {
+  left: 11rem;
+  transform: translateX(100%);
+}
+
+.slick-next {
+  right: 11rem;
+  transform: translateX(-100%);
 }
 
 .section-slider .slick-slide {
@@ -665,6 +711,7 @@
   &-onload {
     opacity: 0;
     position: absolute;
+    z-index: -1;
   }
 
   &-image-container {

@@ -9,9 +9,13 @@
 }
 
 .section-slider {
-  background: radial-gradient(#b8dff500 0%, #e5eef35e 20%);
   padding-bottom: 50rem;
-  border-radius: 0 0 200% 200%;
+  border-radius: 0 0 20% 20%;
+  background: radial-gradient(
+    circle at 120% 10%,
+    #fbd1ff5d 0%,
+    rgba(249, 180, 255, 0) 100%
+  );
 
   @media only screen and (max-width: $bp-medium) {
     border-radius: 0 0 10% 10%;

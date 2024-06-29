@@ -36,9 +36,9 @@ body {
   margin: 0 auto; }
 
 .section-slider {
-  background: radial-gradient(#b8dff500 0%, #e5eef35e 20%);
   padding-bottom: 50rem;
-  border-radius: 0 0 200% 200%; }
+  border-radius: 0 0 20% 20%;
+  background: radial-gradient(circle at 120% 10%, #fbd1ff5d 0%, rgba(249, 180, 255, 0) 100%); }
   @media only screen and (max-width: 56.25em) {
     .section-slider {
       border-radius: 0 0 10% 10%; } }
@@ -104,7 +104,19 @@ body {
     padding: 1.5rem 2rem;
     align-self: flex-end; }
   .button-video {
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-primary);
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2 ease-in-out; }
+    .button-video:hover {
+      color: var(--color-text-2);
+      border-color: var(--color-text-2); }
   .button-banner {
     background: var(--color-white);
     color: var(--color-primary);
@@ -223,7 +235,11 @@ body {
     display: block; }
 
 .slick-arrow {
-  display: none !important; }
+  background: red;
+  z-index: 100; }
+  @media only screen and (max-width: 75em) {
+    .slick-arrow {
+      display: none !important; } }
 
 .slick-dots {
   display: flex !important;
@@ -236,6 +252,29 @@ body {
   @media only screen and (max-width: 68.75em) {
     .slick-dots {
       display: none !important; } }
+
+.slick-prev,
+.slick-next {
+  background: #000000e3;
+  padding: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 2px;
+  top: 30%; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    background: #000000e3; }
+
+.slick-prev {
+  left: 11rem;
+  transform: translateX(100%); }
+
+.slick-next {
+  right: 11rem;
+  transform: translateX(-100%); }
 
 .section-slider .slick-slide {
   opacity: 70%; }
@@ -512,7 +551,8 @@ body {
 
 .blog-onload {
   opacity: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: -1; }
 
 .blog-image-container {
   object-fit: cover;

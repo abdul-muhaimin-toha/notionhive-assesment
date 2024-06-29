@@ -47,6 +47,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.blog-carousal__slider').slick({
     dots: true,
+    prevArrow: false,
+    nextArrow: false,
     infinite: true,
     speed: 900,
     autoplay: true,
