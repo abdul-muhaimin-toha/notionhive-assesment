@@ -35,14 +35,6 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   background-color: #5d4ba51a;
-  color: var(--color-text);
   font-weight: 400;
-}
-
-[data-scroll-container] {
-  overflow: hidden;
-}
-
-.scroll-content {
-  position: relative;
+  color: var(--color-text);
 }
