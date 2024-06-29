@@ -38,3 +38,11 @@ body {
   color: var(--color-text);
   font-weight: 400;
 }
+
+[data-scroll-container] {
+  overflow: hidden;
+}
+
+.scroll-content {
+  position: relative;
+}

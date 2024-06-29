@@ -27,6 +27,12 @@ body {
   color: var(--color-text);
   font-weight: 400; }
 
+[data-scroll-container] {
+  overflow: hidden; }
+
+.scroll-content {
+  position: relative; }
+
 .section-header {
   background: var(--color-white);
   box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.308); }
