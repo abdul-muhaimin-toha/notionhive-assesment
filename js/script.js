@@ -39,7 +39,7 @@ $(document).ready(function () {
     infinite: true,
     speed: 900,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     loop: true,
   });
 });
@@ -50,7 +50,7 @@ $(document).ready(function () {
     infinite: true,
     speed: 900,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 1000,
     loop: true,
   });
 });
